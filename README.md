@@ -37,19 +37,19 @@ AI 工具链  把调试环境接进 MCP，让模型看见我看见的东西
 
 ## `$ ls ~/works`
 
-**[cachyOS-config](https://github.com/numb747/cachyOS-config)**
+**[cachyOS-config](https://github.com/numb747/cachyOS-config)** · `Python`<br>
 CachyOS + Hyprland 桌面配置。幂等安装器，外加 10 篇记录「为什么这么选」的文档。
 
-**[mitmweb-mcp](https://github.com/numb747/mitmweb-mcp)**
+**[mitmweb-mcp](https://github.com/numb747/mitmweb-mcp)** · `Python`<br>
 让模型读你正在看的那个 mitmweb 会话 —— 一个 UI，你和 AI 共用。
 
-**[qq-music-api-Reverse](https://github.com/numb747/qq-music-api-Reverse)**
+**[qq-music-api-Reverse](https://github.com/numb747/qq-music-api-Reverse)** · `JavaScript`<br>
 QQ 音乐 web 版加密链路的 Node 复刻。把 VMP 引擎抽出沙箱，还原 AES-GCM 加密 → SHA-1 签名 → 解密全链。
 
-**[qiyou-Reverse](https://github.com/numb747/qiyou-Reverse)**
-Android 加固 APK 逆向方法论。动态脱壳 → 反编译 → Native 层 → 加密验证，配 frida 脚本集。
+**[qiyou-Reverse](https://github.com/numb747/qiyou-Reverse)** · `Frida`<br>
+Android 加固 APK 逆向方法论。动态脱壳 → 反编译 → Native 层 → 加密验证，配一套 frida 脚本。
 
-**[pokemon-crwal](https://github.com/numb747/pokemon-crwal)**
+**[pokemon-crwal](https://github.com/numb747/pokemon-crwal)** · `Python`<br>
 Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 
 <br>
@@ -58,14 +58,9 @@ Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/0-profile-details.svg" />
+<p><img width="350" alt="top languages by repo" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" /><img width="350" alt="commits per hour" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/4-productive-time.svg" /></p>
 
-<img height="180" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" />
-<img height="180" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/3-stats.svg" />
-
-<br><br>
-
-<img src="https://raw.githubusercontent.com/numb747/numb747/output/snake.svg" />
+<p><img width="700" alt="contribution snake" src="https://raw.githubusercontent.com/numb747/numb747/output/snake.svg" /></p>
 
 </div>
 
