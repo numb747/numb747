@@ -183,6 +183,25 @@ CARDS = {
             [("        ╰─────────────╯", MUTED)],
             [("          one session", MUTED)],
         ]),
+    "qiyou-Reverse": dict(
+        title="qiyou-Reverse",
+        en="Unpacking a hardened Android APK, end to end.",
+        cn="腾讯乐固加固 APK 的完整逆向方法论",
+        x0=600,
+        rows=[
+            [("     packed APK", FG)],
+            [("         │", MUTED)],
+            [("         ├─ ", MUTED), ("unpack", BLUE),
+             ("      frida-dexdump", MUTED)],
+            [("         ├─ ", MUTED), ("decompile", BLUE),
+             ("   jadx", MUTED)],
+            [("         ├─ ", MUTED), ("native", BLUE),
+             ("      IDA Pro", MUTED)],
+            [("         └─ ", MUTED), ("verify", PURPLE),
+             ("      reproduce", MUTED)],
+            [("         ▼", MUTED)],
+            [("     methodology", FG)],
+        ]),
 }
 
 if __name__ == "__main__":
