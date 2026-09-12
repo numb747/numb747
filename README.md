@@ -68,17 +68,9 @@ Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 
 <p><img width="350" alt="top languages by repo" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/1-repos-per-language.svg" /><img width="350" alt="commits per hour" src="https://raw.githubusercontent.com/numb747/numb747/main/profile-summary-card-output/tokyonight/4-productive-time.svg" /></p>
 
-<p><img width="700" alt="contribution snake" src="https://raw.githubusercontent.com/numb747/numb747/output/snake.svg" /></p>
-
-</div>
-
 <br>
-
-<div align="center">
 
 <sub>7️⃣ Seven</sub>
-
-<br>
 
 ![visitors](https://komarev.com/ghpvc/?username=numb747&style=flat-square&color=7aa2f7&label=visitors)
 

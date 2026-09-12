@@ -1,11 +1,10 @@
 name: snake
 
+# README 目前不引用 snake.svg —— 贡献量还撑不起那张图，一整片灰点里
+# 只有十来个有色格子，空的可视化比没有更糟。所以停掉每日定时，
+# 只留手动触发；等提交密度上来了，把 README 里那行 <img> 加回去即可。
 on:
-  schedule:
-    - cron: "17 3 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
 
 jobs:
   build:
