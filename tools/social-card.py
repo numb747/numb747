@@ -9,32 +9,18 @@
 用法：python3 social-card.py            # 生成全部
       python3 social-card.py mitmweb-mcp
 """
-import importlib.util
 import os
 import subprocess
 import sys
 import html
 
-ASCII_PY = os.path.expanduser(
-    "~/cachyOS-config/wallpaper/tokyonight/_ascii.py")
+from _tn import BG, FG, BLUE, PURPLE, MUTED, DIM, MONO_FONT, load_ascii, write_png
+
 POOL = os.path.expanduser("~/Pictures/Wallpapers/tokyonight")
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "social")
-
-spec = importlib.util.spec_from_file_location("_ascii", ASCII_PY)
-assert spec and spec.loader, f"读不到 {ASCII_PY}"
-A = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(A)
+A = load_ascii()
 
 W, H = 1280, 640
-BG = "#1a1b26"
-MONO_FONT = "MesloLGS Nerd Font Mono, Sarasa Mono SC"
-
-# Tokyo Night
-FG = "#c0caf5"
-BLUE = "#7aa2f7"
-PURPLE = "#bb9af7"
-MUTED = "#565f89"
-DIM = "#a9b1d6"
 
 
 def crop_ratio(path, ratio):
@@ -155,13 +141,8 @@ def card(name, title, en, cn, x0=660, src=None, ramp=None, pal=None,
 </g>
 </svg>'''
     os.makedirs(OUT, exist_ok=True)
-    sp = os.path.join(OUT, name + ".svg")
     dp = os.path.join(OUT, name + ".png")
-    open(sp, "w").write(svg)
-    subprocess.run(["rsvg-convert", "-w", str(W), "-h", str(H), "-o", dp, sp],
-                   check=True)
-    os.remove(sp)
-    return dp, os.path.getsize(dp)
+    return dp, write_png(svg, dp, W, H)
 
 
 CARDS = {

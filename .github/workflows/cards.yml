@@ -11,8 +11,12 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
+      # AUTO_PUSH: false —— 这个 action 固定生成 5 张卡 + 2 个索引 README，
+      # 没有「只生成某几张」的入参（见 action.yml 的 inputs）。让它自己提交的话，
+      # README 用不到的 3 张会天天被重写、进 git 历史、还占着仓库根的视线。
+      # 所以关掉自动推送，生成后自己裁剪再提交。
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -20,3 +24,25 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           UTC_OFFSET: 8
           THEME: tokyonight
+          AUTO_PUSH: false
+
+      - name: 只留 README 真正引用的两张
+        run: |
+          cd profile-summary-card-output
+          # 撤掉的理由各不相同，别想当然加回来：
+          #   0-profile-details  头像/用户名/仓库数/加入时间，和左侧边栏逐项重复
+          #   2-most-commit-lang 和 1-repos-per-language 内容几乎一样
+          #   3-stats            会公开展示 Total PRs: 0 / Total Issues: 0
+          rm -f README.md
+          cd tokyonight
+          rm -f 0-profile-details.svg 2-most-commit-language.svg 3-stats.svg README.md
+
+      - name: 有变化才提交
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A profile-summary-card-output
+          git diff --cached --quiet || {
+            git commit -m 'Regenerate profile summary cards'
+            git push
+          }

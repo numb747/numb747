@@ -1,0 +1,6 @@
+__pycache__/
+*.py[co]
+
+# 生成中间物：tools/ 里两个脚本都是先落一份临时 svg 再交给 rsvg-convert，
+# 正常路径会自己删掉，但脚本中途出错时会留下残骸。
+*.svg.tmp

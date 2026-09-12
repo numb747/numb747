@@ -9,27 +9,20 @@
 
 用法：python3 banner.py
 """
-import importlib.util
 import os
-import subprocess
 import html
 
 from PIL import Image, ImageDraw, ImageFont
 
-ASCII_PY = os.path.expanduser(
-    "~/cachyOS-config/wallpaper/tokyonight/_ascii.py")
+from _tn import (BG, BLUE, PURPLE, CYAN, MUTED, MONO_FONT as MONO,
+                 load_ascii, write_png)
+
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets")
 FONT = "/usr/share/fonts/TTF/MesloLGSNerdFont-Bold.ttf"
-
-spec = importlib.util.spec_from_file_location("_ascii", ASCII_PY)
-assert spec and spec.loader, f"读不到 {ASCII_PY}"
-A = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(A)
+A = load_ascii()
 
 W, H = 1200, 260
 COLS = 150                       # 字符列数；越高笔画越细腻
-BG = "#1a1b26"
-MONO = "MesloLGS Nerd Font Mono"
 
 
 def text_bitmap(text, path, wfrac=0.46, ycenter=0.5):
@@ -71,8 +64,8 @@ def render(src, dest, text_rows=()):
     cellh = H / rows
     grid = A.sample(src, COLS, rows, sig=3)
     # Tokyo Night 冷调渐变：蓝 → 紫 → 青
-    stops = [(0.0, (0x7a, 0xa2, 0xf7)), (0.5, (0xbb, 0x9a, 0xf7)),
-             (1.0, (0x7d, 0xcf, 0xff))]
+    hexrgb = lambda h: tuple(int(h[i:i + 2], 16) for i in (1, 3, 5))
+    stops = [(0.0, hexrgb(BLUE)), (0.5, hexrgb(PURPLE)), (1.0, hexrgb(CYAN))]
 
     def grad(t):
         for i in range(len(stops) - 1):
@@ -81,7 +74,7 @@ def render(src, dest, text_rows=()):
                 k = (t - a[0]) / (b[0] - a[0])
                 return "#%02x%02x%02x" % tuple(
                     round(a[1][j] + (b[1][j] - a[1][j]) * k) for j in range(3))
-        return "#7aa2f7"
+        return BLUE
 
     LEVELS = [(0.62, "█"), (0.40, "▓"), (0.20, "▒"), (0.08, "░")]
     lum = [[(0.2126 * p[0] + 0.7152 * p[1] + 0.0722 * p[2]) / 255 for p in r]
@@ -125,12 +118,7 @@ def render(src, dest, text_rows=()):
            f'viewBox="0 0 {W} {H}"><rect width="{W}" height="{H}" fill="{BG}"/>'
            f'<text font-family="{MONO}" font-size="{cellh:g}" '
            f'xml:space="preserve">{"".join(body)}</text>{extra}</svg>')
-    sp = dest + ".svg"
-    open(sp, "w").write(svg)
-    subprocess.run(["rsvg-convert", "-w", str(W), "-h", str(H), "-o", dest, sp],
-                   check=True)
-    os.remove(sp)
-    return os.path.getsize(dest)
+    return write_png(svg, dest, W, H)
 
 
 if __name__ == "__main__":
@@ -138,5 +126,5 @@ if __name__ == "__main__":
     bmp = text_bitmap("numb747", "/tmp/_wordmark.png", wfrac=0.46, ycenter=0.44)
     dest = os.path.join(OUT, "banner.png")
     rows = (("reverse engineering  ·  scraping  ·  linux ricing",
-             int(H * 0.78), 17, "#565f89", 2.4),)
+             int(H * 0.78), 17, MUTED, 2.4),)
     print(f"  banner.png  {render(bmp, dest, rows)/1024:.0f} KB  {dest}")
