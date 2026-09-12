@@ -1,12 +1,6 @@
 <div align="center">
 
-<pre>
-┌─┐┌─┐┬  ┬┌─┐┌┐┌
-└─┐├┤ └┐┌┘├┤ │││
-└─┘└─┘ └┘ └─┘┘└┘
-</pre>
-
-**Reverse engineering · Scraping · Linux ricing**
+<img alt="numb747 — reverse engineering · scraping · linux ricing" src="https://raw.githubusercontent.com/numb747/numb747/main/assets/banner.png" />
 
 **逆向 · 爬虫 · Linux 折腾**
 
@@ -47,7 +41,7 @@ tooling   wiring the debugger into MCP, so the model sees what I see
 ## `$ ls ~/works`
 
 **[cachyOS-config](https://github.com/numb747/cachyOS-config)** · `Python`<br>
-CachyOS + Hyprland desktop config. An idempotent installer, plus 10 documents on *why* each choice was made.<br>
+CachyOS + Hyprland desktop config. Idempotent installer + 10 docs on *why* each choice was made.<br>
 CachyOS + Hyprland 桌面配置。幂等安装器，外加 10 篇记录「为什么这么选」的文档。
 
 **[mitmweb-mcp](https://github.com/numb747/mitmweb-mcp)** · `Python`<br>
@@ -55,11 +49,11 @@ Lets the model read the mitmweb session you already have open — one UI, shared
 让模型读你正在看的那个 mitmweb 会话 —— 一个 UI，你和 AI 共用。
 
 **[qq-music-api-Reverse](https://github.com/numb747/qq-music-api-Reverse)** · `JavaScript`<br>
-QQ Music's web crypto chain reimplemented in Node: the VMP engine lifted out of its sandbox, AES-GCM → SHA-1 signing → decrypt.<br>
-QQ 音乐 web 版加密链路的 Node 复刻。把 VMP 引擎抽出沙箱，还原 AES-GCM 加密 → SHA-1 签名 → 解密全链。
+QQ Music's web crypto chain rebuilt in Node: VMP lifted out of its sandbox, AES-GCM → SHA-1 → decrypt.<br>
+QQ 音乐 web 版加密链路的 Node 复刻。把 VMP 引擎抽出沙箱，还原 AES-GCM → SHA-1 签名 → 解密全链。
 
 **[qiyou-Reverse](https://github.com/numb747/qiyou-Reverse)** · `Frida`<br>
-Methodology for reversing a packed Android APK: runtime unpacking → decompile → native layer → verifying the crypto, with a frida script set.<br>
+Reversing a packed Android APK: unpacking → decompile → native layer → crypto, plus a frida script set.<br>
 Android 加固 APK 逆向方法论。动态脱壳 → 反编译 → Native 层 → 加密验证，配一套 frida 脚本。
 
 **[pokemon-crwal](https://github.com/numb747/pokemon-crwal)** · `Python`<br>
@@ -81,11 +75,8 @@ Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 <br>
 
 <div align="center">
-<sub>
 
-`7️⃣ Seven`
-
-</sub>
+<sub>7️⃣ Seven</sub>
 
 <br>
 
