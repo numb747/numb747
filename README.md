@@ -6,9 +6,11 @@
 └─┘└─┘ └┘ └─┘┘└┘
 </pre>
 
+**Reverse engineering · Scraping · Linux ricing**
+
 **逆向 · 爬虫 · Linux 折腾**
 
-<sub>把看得见的界面，拆成看得懂的协议</sub>
+<sub>Turning interfaces you can see into protocols you can read<br>把看得见的界面，拆成看得懂的协议</sub>
 
 <br>
 
@@ -27,10 +29,17 @@
 ## `$ whoami`
 
 ```
-逆向工程   VMP 还原 · 签名算法复刻 · Android 加固脱壳
-爬虫       反爬对抗 · 协议级复刻 · 登录态维持
-桌面       CachyOS + Hyprland，配置即文档
-AI 工具链  把调试环境接进 MCP，让模型看见我看见的东西
+reverse   VMP unpacking · signature reproduction · Android packer stripping
+逆向      VMP 还原 · 签名算法复刻 · Android 加固脱壳
+
+scrape    anti-bot · protocol-level reimplementation · session persistence
+爬虫      反爬对抗 · 协议级复刻 · 登录态维持
+
+desktop   CachyOS + Hyprland, where the config is the documentation
+桌面      CachyOS + Hyprland，配置即文档
+
+tooling   wiring the debugger into MCP, so the model sees what I see
+工具链    把调试环境接进 MCP，让模型看见我看见的东西
 ```
 
 <br>
@@ -38,18 +47,23 @@ AI 工具链  把调试环境接进 MCP，让模型看见我看见的东西
 ## `$ ls ~/works`
 
 **[cachyOS-config](https://github.com/numb747/cachyOS-config)** · `Python`<br>
+CachyOS + Hyprland desktop config. An idempotent installer, plus 10 documents on *why* each choice was made.<br>
 CachyOS + Hyprland 桌面配置。幂等安装器，外加 10 篇记录「为什么这么选」的文档。
 
 **[mitmweb-mcp](https://github.com/numb747/mitmweb-mcp)** · `Python`<br>
+Lets the model read the mitmweb session you already have open — one UI, shared by you and your AI.<br>
 让模型读你正在看的那个 mitmweb 会话 —— 一个 UI，你和 AI 共用。
 
 **[qq-music-api-Reverse](https://github.com/numb747/qq-music-api-Reverse)** · `JavaScript`<br>
+QQ Music's web crypto chain reimplemented in Node: the VMP engine lifted out of its sandbox, AES-GCM → SHA-1 signing → decrypt.<br>
 QQ 音乐 web 版加密链路的 Node 复刻。把 VMP 引擎抽出沙箱，还原 AES-GCM 加密 → SHA-1 签名 → 解密全链。
 
 **[qiyou-Reverse](https://github.com/numb747/qiyou-Reverse)** · `Frida`<br>
+Methodology for reversing a packed Android APK: runtime unpacking → decompile → native layer → verifying the crypto, with a frida script set.<br>
 Android 加固 APK 逆向方法论。动态脱壳 → 反编译 → Native 层 → 加密验证，配一套 frida 脚本。
 
 **[pokemon-crwal](https://github.com/numb747/pokemon-crwal)** · `Python`<br>
+Playwright-driven local auto-login. Auditable code, credentials never leave the machine.<br>
 Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 
 <br>
