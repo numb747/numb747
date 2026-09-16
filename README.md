@@ -11,8 +11,8 @@
 ![Python](https://img.shields.io/badge/Python-1a1b26?style=flat-square&logo=python&logoColor=7aa2f7)
 ![JavaScript](https://img.shields.io/badge/JavaScript-1a1b26?style=flat-square&logo=javascript&logoColor=bb9af7)
 ![TypeScript](https://img.shields.io/badge/TypeScript-1a1b26?style=flat-square&logo=typescript&logoColor=7aa2f7)
-![Frida](https://img.shields.io/badge/Frida-1a1b26?style=flat-square&logo=frida&logoColor=bb9af7)
-![mitmproxy](https://img.shields.io/badge/mitmproxy-1a1b26?style=flat-square&logo=mitmproxy&logoColor=9ece6a)
+![Frida](https://img.shields.io/badge/Frida-1a1b26?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjM3LjE1IC0yLjAgNDMuMCA0My4wIj48cGF0aCBmaWxsPSIjYmI5YWY3IiBkPSJNNTEuNCwzOUg0MS4zbDguNC0xMi45Yy00LjgtMi4zLTcuNC02LjUtNy40LTEyLjZDNDIuMyw0LjgsNDguMiwwLDU4LjUsMEg3NnYzOWgtOVYyOGgtOC41aC0wLjhMNTEuNCwzOXogTTY3LDIwVjdoLTguNWMtNC45LDAtNy43LDItNy43LDYuNGMwLDQuNSwyLjgsNi42LDcuNyw2LjZINjd6Ii8%2BPC9zdmc%2B)
+![mitmproxy](https://img.shields.io/badge/mitmproxy-1a1b26?style=flat-square&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYBAMAAAASWSDLAAAAElBMVEW9vr%2Fb2dbp6ens6OPYg0jv7%2B6kN8aVAAAABnRSTlMLWJ7Hv9VQmfEmAAAAk0lEQVQY032QQQ6DMAwE16G9W9AHGEfcifkAlfwA1P8%2FprJD6Y0cEm%2B8mngD3K7Rqv3qKkA5VZHc5xSKsm0C52yUBlSmaAzQOFp30RvEGDTuVtrJFgamEMDTfQUKgz6q5l5Vl0toF5K2AyjBJJBVfuxDoPUI9IvzuWRCAwswGTBJzkveB%2B2uUf5BznDtimp1vv%2BYL5QwD8yDdnjOAAAAAElFTkSuQmCC)
 ![Arch](https://img.shields.io/badge/Arch_Linux-1a1b26?style=flat-square&logo=archlinux&logoColor=7dcfff)
 ![Hyprland](https://img.shields.io/badge/Hyprland-1a1b26?style=flat-square&logo=hyprland&logoColor=7dcfff)
 
