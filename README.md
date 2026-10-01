@@ -62,6 +62,19 @@ Playwright 驱动的本地自动登录。代码可审，凭证不出本机。
 
 <br>
 
+## `$ finger seven`
+
+<div align="center">
+
+[![Gmail](https://img.shields.io/badge/Gmail-cannonewhy123%40gmail.com-1a1b26?style=flat-square&logo=gmail&logoColor=7aa2f7&labelColor=1a1b26)](mailto:cannonewhy123@gmail.com)
+[![Discord](https://img.shields.io/badge/Discord-numb1093-1a1b26?style=flat-square&logo=discord&logoColor=bb9af7&labelColor=1a1b26)](https://discord.com/users/1079010844505030707)
+
+<sub>Tech talk, collaboration, job opportunities — welcome. Gray-market / paid-content cracking requests — please don't.<br>技术交流、合作、工作机会都欢迎；灰产、破解付费内容之类的就别来了 🙏</sub>
+
+</div>
+
+<br>
+
 ## `$ stat`
 
 <div align="center">
