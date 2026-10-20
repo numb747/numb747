@@ -1,14 +1,12 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/portrait.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/portrait.svg" />
-  <img src="assets/portrait.svg" width="100%" alt="numb747 — pixel art: a young man with glasses, chin on his hand, watching a monitor late at night; he blinks, the screen light breathes, dust drifts in the lamp light." />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/portrait-night.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/portrait-dusk.svg" />
+  <img src="assets/portrait-dusk.svg" width="100%" alt="numb747 — pixel art: a young man with glasses, chin on his hand, watching a monitor; at night the screen light breathes, at dusk sunset light fills the room; dust drifts and he blinks now and then." />
 </picture>
 
 **逆向 · 爬虫 · Linux 折腾**
-
-<sub>Turning interfaces you can see into protocols you can read<br>把看得见的界面，拆成看得懂的协议</sub>
 
 <br>
 
