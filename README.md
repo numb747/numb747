@@ -1,6 +1,10 @@
 <div align="center">
 
-<img alt="numb747 — reverse engineering · scraping · linux ricing" src="https://raw.githubusercontent.com/numb747/numb747/main/assets/banner.png" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/portrait.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="assets/portrait.svg" />
+  <img src="assets/portrait.svg" width="100%" alt="numb747 — pixel art: a young man with glasses, chin on his hand, watching a monitor late at night; he blinks, the screen light breathes, dust drifts in the lamp light." />
+</picture>
 
 **逆向 · 爬虫 · Linux 折腾**
 
