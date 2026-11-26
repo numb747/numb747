@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """生成主页 README 的 ASCII 字标横幅。
 
-把文字先渲成位图，再喂进 ~/cachyOS-config/wallpaper/tokyonight/_ascii.py 的
+把文字先渲成位图，再喂进 ~/src/numb747/cachyOS-config/wallpaper/tokyonight/_ascii.py 的
 采样与调色板吸附管线 —— 字形本身由 ASCII 字符拼出来，配色走 Tokyo Night。
 
 之所以不用 <pre> 里的盒绘字符：GitHub 的等宽字体会把 ┌─┐ 渲染得极小且糊成

@@ -20,7 +20,7 @@ DIM = "#a9b1d6"
 MONO_FONT = "MesloLGS Nerd Font Mono, Sarasa Mono SC"
 
 ASCII_PY = os.path.expanduser(
-    "~/cachyOS-config/wallpaper/tokyonight/_ascii.py")
+    "~/src/numb747/cachyOS-config/wallpaper/tokyonight/_ascii.py")
 
 
 def load_ascii():
