@@ -19,8 +19,8 @@ DIM = "#a9b1d6"
 # CJK 由 Sarasa 兜底：MesloLGS 没有汉字字形，缺了它中文会掉成方框
 MONO_FONT = "MesloLGS Nerd Font Mono, Sarasa Mono SC"
 
-ASCII_PY = os.path.expanduser(
-    "~/src/numb747/cachyOS-config/wallpaper/tokyonight/_ascii.py")
+# 来自 cachyOS-config 仓库的 wallpaper/tokyonight/_ascii.py；本机放哪不写进公开仓库，用环境变量指过去
+ASCII_PY = os.path.expanduser(os.environ.get("ASCII_PY", ""))
 
 
 def load_ascii():
@@ -28,6 +28,8 @@ def load_ascii():
 
     它不是包，只能按路径加载。两个脚本都要用，所以收在这里。
     """
+    if not ASCII_PY or not os.path.isfile(ASCII_PY):
+        raise SystemExit("先设 ASCII_PY=<cachyOS-config 仓库>/wallpaper/tokyonight/_ascii.py")
     spec = importlib.util.spec_from_file_location("_ascii", ASCII_PY)
     assert spec and spec.loader, f"读不到 {ASCII_PY}"
     mod = importlib.util.module_from_spec(spec)

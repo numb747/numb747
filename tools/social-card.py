@@ -2,7 +2,7 @@
 """生成 GitHub Social preview 图（1280×640，Tokyo Night）。
 
 文字在左，视觉在右。右侧两种来源：
-  - 图像派生 ASCII：复用 ~/src/numb747/cachyOS-config/wallpaper/tokyonight/_ascii.py 的
+  - 图像派生 ASCII：复用 cachyOS-config 仓库里 wallpaper/tokyonight/_ascii.py 的
     采样与调色板吸附，渲进右侧区域后用横向渐变遮罩淡出与文字的交界。
   - 手写 ASCII 示意图：线条细的源图在这个分辨率下会退化成噪点，直接画更清楚。
 
@@ -16,7 +16,7 @@ import html
 
 from _tn import BG, FG, BLUE, PURPLE, MUTED, DIM, MONO_FONT, load_ascii, write_png
 
-POOL = os.path.expanduser("~/Pictures/Wallpapers/tokyonight")
+POOL = os.path.expanduser(os.environ.get("WALLPAPER_POOL", "~/Pictures/Wallpapers/tokyonight"))   # 壁纸图库，可用环境变量改
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "social")
 A = load_ascii()
 
